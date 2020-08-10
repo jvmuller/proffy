@@ -81,6 +81,7 @@ function TeacherForm() {
                         <Input 
                             name="name"
                             label="Nome completo"
+                            type="text"
                             value={name}
                             onChange={(e) => { setName(e.target.value) }}
                         />
@@ -88,6 +89,7 @@ function TeacherForm() {
                         <Input 
                             name="avatar"
                             label="Avatar"
+                            type="text"
                             value={avatar}
                             onChange={(e) => { setAvatar(e.target.value) }}
                         />
@@ -95,6 +97,7 @@ function TeacherForm() {
                         <Input 
                             name="whatsapp" 
                             label="WhatsApp"
+                            type="text"
                             value={whatsapp}
                             onChange={(e) => { setWhatsapp(e.target.value) }}
                         />
@@ -132,6 +135,7 @@ function TeacherForm() {
                         <Input 
                             name="cost"
                             label="Custo da sua hora por aula"
+                            type="text"
                             value={cost}
                             onChange={(e) => { setCost(e.target.value) }}
                         />
@@ -140,7 +144,7 @@ function TeacherForm() {
                     <fieldset>
                         <legend>
                             Horários disponíveis
-                            <button type="button">
+                            <button type="button" onClick={addNewScheduleItem}>
                                 + Novo horário
                             </button>
                         </legend>
@@ -190,7 +194,7 @@ function TeacherForm() {
                             Importante! <br />
                             Preencha todos os dados
                         </p>
-                        <button type="submit" onClick={addNewScheduleItem}>
+                        <button type="submit">
                             Salvar cadastro
                         </button>
                     </footer>
